@@ -1,0 +1,18 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{1D67FA32-2305-170D-0006-02A234F15962}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "EOH2018",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	],
+	"Plugins": [
+	]
+}
