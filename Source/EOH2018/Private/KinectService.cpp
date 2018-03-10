@@ -44,7 +44,7 @@ void AKinectService::DataResponse(FHttpRequestPtr Request, FHttpResponsePtr Resp
 }
 
 int AKinectService::GetUserNumber() {
-  return skeletonData.data.Num();
+  return skeletonData.data.Num() * 2; // trick the interface
 }
 
 FVector AKinectService::GetLeftHand(int userIndex) {
@@ -76,5 +76,5 @@ FVector AKinectService::RealToScreen(const FVector& real) {
 }
 
 FVector AKinectService::GetPrimaryHandScreenPosition(int userIndex) {
-  return RealToScreen(GetLeftHand(userIndex));
+  return RealToScreen(userIndex % 2 ? GetLeftHand(userIndex / 2) : GetRightHand(userIndex/2));
 }
